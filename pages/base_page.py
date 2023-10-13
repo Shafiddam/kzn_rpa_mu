@@ -1,7 +1,5 @@
 import os
-from time import sleep
 
-import pyotp
 from selenium.webdriver.support.wait import WebDriverWait
 
 
@@ -16,4 +14,4 @@ class BasePage:
         """ Открывает новую вкладку и переходит по данной ссылке """
         self.driver.execute_script("window.open('');")  # открываем новую вкладку
         self.driver.switch_to.window(self.driver.window_handles[-1])  # переключаемся на новую вкладку
-        self.driver.get(link)  # переходим по ссылке
+        self.driver.get(link)
